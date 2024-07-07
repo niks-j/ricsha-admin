@@ -1,4 +1,3 @@
-
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:ricsha_admin/methods/common_methods.dart';
@@ -66,14 +65,14 @@ class _DriversDataListState extends State<DriversDataList>
                   Text(itemsList[index]["id"].toString()),
                 ),
 
-            cMethods.data(
-            1,
-              Image.network(
-                itemsList[index]["photo"].toString(),
-                width: 50,
-                height: 50,
-              ),
-            ),
+                cMethods.data(
+                  1,
+                  Image.network(
+                    itemsList[index]["photo"].toString(),
+                    width: 50,
+                    height: 50,
+                  ),
+                ),
 
                 cMethods.data(
                   1,
@@ -96,8 +95,8 @@ class _DriversDataListState extends State<DriversDataList>
                 cMethods.data(
                   1,
                   itemsList[index]["earnings"] != null ?
-                  Text("RS " + itemsList[index]["earnings"].toString())
-                      : const Text("RS 0"),
+                  Text("\$ " + itemsList[index]["earnings"].toString())
+                      : const Text("\$ 0"),
                 ),
 
                 cMethods.data(
